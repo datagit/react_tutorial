@@ -9,7 +9,7 @@ const TableHeader = () => {
         </tr>
         </thead>
     )
-}
+};
 const TableBody = (props) => {
     const rows = props.characterData.map((row, index) => {
       return (
@@ -21,9 +21,9 @@ const TableBody = (props) => {
               </td>
           </tr>
       )
-    })
+    });
     return <tbody>{rows}</tbody>
-}
+};
 class Table extends Component {
     render() {
         const { characterData, removeCharacter } = this.props

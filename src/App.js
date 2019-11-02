@@ -28,7 +28,7 @@ class App extends Component {
         job: 'IT',
       },
     ],
-  }
+  };
   removeCharacter = index => {
     const { characters } = this.state;
     this.setState({
@@ -36,13 +36,16 @@ class App extends Component {
         return i !== index
       })
     })
-  }
+  };
+  handleSubmit = character => {
+    this.setState({ characters: [...this.state.characters, character] })
+  };
   render() {
     const { characters } = this.state
     return (
         <div className="container">
           <Table characterData={characters} removeCharacter={this.removeCharacter}/>
-          <Form />
+          <Form handleSubmit={this.handleSubmit} />
         </div>
     )
   }

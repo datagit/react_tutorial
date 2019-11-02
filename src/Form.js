@@ -1,28 +1,23 @@
 import React, {Component} from 'react'
 class Form extends Component {
     constructor(props) {
-        super(props)
+        super(props);
         this.initalState = {
             name: '',
             job: '',
-        }
+        };
         this.state = this.initalState
     }
     handleChange = event => {
-        const {name, value} = event.target
+        const {name, value} = event.target;
         this.setState({
             [name]: value,
         })
-    }
-    handleSubmit = character => {
-        this.setState({
-            characters: [...this.state.characters, character]
-        })
-    }
+    };
     submitForm = () => {
-        this.props.handleSubmit(this.state)
+        this.props.handleSubmit(this.state);
         this.setState(this.initalState)
-    }
+    };
     render() {
         const {name, job} = this.state;
         return(
