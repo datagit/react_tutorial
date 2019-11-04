@@ -16,7 +16,7 @@ class Form extends Component {
     };
     submitForm = () => {
         this.props.handleSubmit(this.state);
-        this.setState(this.initalState)
+        this.setState(this.initalState);
     };
     render() {
         const {name, job} = this.state;

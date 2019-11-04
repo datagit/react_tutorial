@@ -1,8 +1,8 @@
 import React, {Component} from 'react'
 // import logo from './logo.svg';
 import './App.css';
-import Table from "./Table";
-import Form from "./Form";
+import Table from '../table/Table';
+import Form from '../form/Form';
 
 class App extends Component {
   state = {
