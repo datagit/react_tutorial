@@ -3,7 +3,7 @@ import React, {Component} from 'react'
 import './App.css';
 import Table from '../table/Table';
 import Form from '../form/Form';
-
+import Toggle from "../toggle/Toggle";
 class App extends Component {
   state = {
     characters: [
@@ -46,6 +46,7 @@ class App extends Component {
         <div className="container">
           <Table characterData={characters} removeCharacter={this.removeCharacter}/>
           <Form handleSubmit={this.handleSubmit} />
+          <Toggle/>
         </div>
     )
   }
