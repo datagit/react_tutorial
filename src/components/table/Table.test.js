@@ -1,5 +1,8 @@
-import React from 'react';
-import ReactDOM from 'react-dom';
+// https://reactjs.org/docs/testing-recipes.html#setup--teardown
+
+import React from "react";
+import { render, unmountComponentAtNode } from "react-dom";
+import { act } from "react-dom/test-utils";
 import Table from '../table/Table';
 
 let characters = [
@@ -24,13 +27,28 @@ let characters = [
         job: 'IT',
     },
 ];
-function removeCharacter(index) {
-    characters = characters.filter((character, i) => {
-        return i !== index
+
+let container = null;
+beforeEach(() => {
+    // setup a DOM element as a render target
+    container = document.createElement("div");
+    document.body.appendChild(container);
+});
+
+afterEach(() => {
+    // cleanup on exiting
+    unmountComponentAtNode(container);
+    container.remove();
+    container = null;
+});
+
+it ('src/components/table/Table.test.js: renders with characterData', () => {
+    // begin test case 1:
+    act(() => {
+        // render components
+        render(<Table characterData={characters}/>, container);
     });
-}
-it('renders without crashing', () => {
-    const div = document.createElement('div');
-    ReactDOM.render(<Table characterData={characters} removeCharacter={removeCharacter}/>, div);
-    ReactDOM.unmountComponentAtNode(div);
+    // make assertions
+    expect(container.textContent).toContain('Dat Dao');
+    // end test case 1:
 });

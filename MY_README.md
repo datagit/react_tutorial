@@ -4,9 +4,8 @@
 - ESLint: https://viblo.asia/p/hay-su-dung-eslint-cho-du-an-cua-ban-bJzKm07O59N
 - react-scripts: https://create-react-app.dev/docs/getting-started/
 - react app structure folder conventions: https://medium.com/@Charles_Stover/optimal-file-structure-for-react-applications-f3e35ad0a145
-- react redux: 
-- https://insights.innovatube.com/redux-th%E1%BA%ADt-l%C3%A0-%C4%91%C6%A1n-gi%E1%BA%A3n-ph%E1%BA%A7n-1-76a3fa2c31ab
-- https://viblo.asia/p/redux-la-gi-va-tai-sao-can-dung-redux-RnB5pGJJlPG
+- cheat sheet: https://reactcheatsheet.com/
+- testing: https://reactjs.org/docs/testing-recipes.html#setup--teardown
 ```
 my-app
 ├── README.md
