@@ -4,6 +4,8 @@ import './App.css';
 import Table from '../table/Table';
 import Form from '../form/Form';
 import Toggle from "../toggle/Toggle";
+import Search from "../search/Search";
+import Contact from "../contact/Contact";
 class App extends Component {
   state = {
     characters: [
@@ -44,9 +46,15 @@ class App extends Component {
     const { characters } = this.state
     return (
         <div className="container">
-          <Table characterData={characters} removeCharacter={this.removeCharacter}/>
-          <Form handleSubmit={this.handleSubmit} />
-          <Toggle/>
+          {/*<Table characterData={characters} removeCharacter={this.removeCharacter}/>*/}
+          {/*<Form handleSubmit={this.handleSubmit} />*/}
+          {/*<Toggle/>*/}
+          <Search/>
+          <Contact
+              name="Joni Baez"
+              email="test@example.com"
+              site="http://test.com"
+          />
         </div>
     )
   }

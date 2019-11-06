@@ -3,6 +3,8 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+    "jest": "^24.9.0",
+    "pretty": "^2.0.0",
     "react": "^16.11.0",
     "react-dom": "^16.11.0",
     "react-scripts": "3.2.0"
@@ -27,5 +29,9 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
-  }
+  },
+  "main": "index.js",
+  "repository": "https://github.com/datagit/react_tutorial.git",
+  "author": "Dat Dao <datagit@yahoo.com>",
+  "license": "MIT"
 }

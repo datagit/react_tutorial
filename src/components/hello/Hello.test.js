@@ -4,6 +4,9 @@
 import React from "react";
 import { render, unmountComponentAtNode } from "react-dom";
 import { act } from "react-dom/test-utils";
+// In this example, we render a component and format the rendered HTML with the pretty package, before saving it as an inline snapshot:
+import pretty from "pretty";
+
 import Hello from '../hello/Hello';
 
 let container = null;
@@ -45,4 +48,6 @@ it ('src/components/hello/Hello.test.js: renders with or without a name', () => 
     // make assertions
     expect(container.textContent).toBe('Hello, Margaret!');
     // end test case 3:
+    //
+    // expect(2 + 2).toMatchInlineSnapshot();
 });
