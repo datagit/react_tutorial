@@ -6,6 +6,7 @@
 - react app structure folder conventions: https://medium.com/@Charles_Stover/optimal-file-structure-for-react-applications-f3e35ad0a145
 - cheat sheet: https://reactcheatsheet.com/
 - testing: https://reactjs.org/docs/testing-recipes.html#setup--teardown
+- fetch data from api: https://www.robinwieruch.de/react-fetching-data
 ```
 my-app
 ├── README.md

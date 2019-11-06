@@ -6,12 +6,16 @@ class Search extends Component {
         super(props);
         this.state = {
             user: {},
+            isLoading: false,
+            error: null,
         }
     }
     componentDidMount() {
+        this.setState({isLoading: true});
         fetch(API)
             .then(response => response.json())
-            .then(data => this.setState({user:data}));
+            .then(data => this.setState({user:data, isLoading: false}))
+            .catch(error => this.setState({error, isLoading: false}));
     }
     render() {
         const user = this.state.user;
