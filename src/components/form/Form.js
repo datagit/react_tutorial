@@ -9,8 +9,10 @@ class Form extends Component {
         this.state = this.initalState
     }
     handleChange = event => {
+        // set name and value from input=event.target
         const {name, value} = event.target;
         this.setState({
+            // set dynamic key and dynamic value
             [name]: value,
         })
     };

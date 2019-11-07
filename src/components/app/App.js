@@ -46,9 +46,9 @@ class App extends Component {
     const { characters } = this.state
     return (
         <div className="container">
-          {/*<Table characterData={characters} removeCharacter={this.removeCharacter}/>*/}
-          {/*<Form handleSubmit={this.handleSubmit} />*/}
-          {/*<Toggle/>*/}
+          <Table characterData={characters} removeCharacter={this.removeCharacter}/>
+          <Form handleSubmit={this.handleSubmit} />
+          <Toggle/>
           <Search/>
           <Contact
               name="Joni Baez"
